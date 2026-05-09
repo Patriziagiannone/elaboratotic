@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELABORATO TIC</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* Ricorda: l'immagine deve essere nella stessa cartella del file HTML */
+            background: url('Gemini_Generated_Image_tb887dtb887dtb88.png') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .overlay {
+            background-color: rgba(255, 255, 255, 0.94);
+            width: 92%;
+            max-width: 1400px;
+            padding: 30px;
+            border-radius: 40px;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+            position: relative;
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 3.5rem;
+            margin: 0 0 20px 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 6px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .ishikawa-box {
+            position: relative;
+            height: 780px; /* Aumentato per dare più spazio verticale */
+            width: 100%;
+        }
+
+        svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .tic-item {
+            position: absolute;
+            z-index: 10;
+            background: white;
+            border: 3px solid #2c3e50;
+            border-radius: 20px;
+            padding: 12px;
+            width: 210px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+        }
+
+        .tic-item:hover {
+            transform: scale(1.08) translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+            border-color: #3498db;
+            background-color: #f7fbff;
+        }
+
+        .tic-title {
+            font-size: 1rem;
+            font-weight: 800;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+
+        .qr-img {
+            width: 95px;
+            height: 95px;
+            background: white;
+        }
+
+        /* --- POSIZIONAMENTO OTTIMIZZATO PER EVITARE SOVRAPPOSIZIONI --- */
+        
+        /* Lische Superiori */
+        .p1 { top: 10px; left: 5%; }
+        .p3 { top: 10px; left: 35%; }
+        .p5 { top: 10px; left: 65%; }
+
+        /* Lische Inferiori */
+        .p2 { bottom: 15px; left: 5%; }
+        .p4 { bottom: 15px; left: 35%; }
+        .p6 { bottom: 15px; left: 65%; } /* Learning App spostata bene a sinistra della 7 */
+        
+        /* Punto 7 - Spostato più a destra e leggermente più in alto rispetto alla 6 */
+        .p7 { bottom: 180px; left: 78%; width: 200px; }
+
+        /* Posizione Finale - Ebook */
+        .p-final {
+            right: -10px;
+            top: 40%;
+            transform: translateY(-50%);
+            width: 240px;
+            background: #fff9e6;
+            border: 4px solid #e67e22;
+        }
+
+        .p-final .tic-title { color: #d35400; font-size: 1.3rem; }
+
+        .footer-note {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 1.1rem;
+            color: #34495e;
+            background: rgba(52, 152, 219, 0.1);
+            padding: 10px;
+            border-radius: 10px;
+            display: inline-block;
+            width: 100%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+<div class="overlay">
+    <h1>ELABORATO TIC</h1>
+
+    <div class="ishikawa-box">
+        <!-- SVG del Diagramma ricalibrato -->
+        <svg viewBox="0 0 1200 780">
+            <!-- Spina dorsale -->
+            <line x1="50" y1="390" x2="1050" y2="390" stroke="#2c3e50" stroke-width="12" />
+            
+            <!-- Lische verticali (Sopra) -->
+            <line x1="180" y1="390" x2="180" y2="160" stroke="#2c3e50" stroke-width="6" />
+            <line x1="540" y1="390" x2="540" y2="160" stroke="#2c3e50" stroke-width="6" />
+            <line x1="900" y1="390" x2="900" y2="160" stroke="#2c3e50" stroke-width="6" />
+            
+            <!-- Lische verticali (Sotto) -->
+            <line x1="180" y1="390" x2="180" y2="620" stroke="#2c3e50" stroke-width="6" />
+            <line x1="540" y1="390" x2="540" y2="620" stroke="#2c3e50" stroke-width="6" />
+            <line x1="900" y1="390" x2="900" y2="620" stroke="#2c3e50" stroke-width="6" />
+            
+            <!-- Coda -->
+            <path d="M50,390 L10,330 L10,450 Z" fill="#2c3e50" />
+        </svg>
+
+        <!-- 1. CAA -->
+        <a href="https://docs.google.com/presentation/d/1FNbh2wMVKxAntKlDPGsmo_26MPume4eB/edit?usp=share_link" target="_blank" class="tic-item p1">
+            <span class="tic-title">1. COS'É LA CAA</span>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://docs.google.com/presentation/d/1FNbh2wMVKxAntKlDPGsmo_26MPume4eB/edit?usp=share_link" class="qr-img">
+        </a>
+
+        <!-- 2. Canva -->
+        <a href="https://docs.google.com/presentation/d/1mWXzUUqfn7vMiIGCX9N1sQy-zDbpL5as/edit?usp=share_link" target="_blank" class="tic-item p2">
+            <span class="tic-title">2. CONSEGNA LAVORO</span>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://docs.google.com/presentation/d/1mWXzUUqfn7vMiIGCX9N1sQy-zDbpL5as/edit?usp=share_link" class="qr-img">
+        </a>
+
+        <!-- 3. Notebooklm -->
+        <a href="https://drive.google.com/file/d/1Pe9UsctM3Rhcd5B12UMBw3ZKmWQdK-ai/view?usp=share_link" target="_blank" class="tic-item p3">
+            <span class="tic-title">3. USO DEL PADLET</span>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://drive.google.com/file/d/1Pe9UsctM3Rhcd5B12UMBw3ZKmWQdK-ai/view?usp=share_link" class="qr-img">
+        </a>
+
+        <!-- 4. PADLET -->
+        <a href="https://padlet.com/PatriziaGiannone/oltre_le_parole" target="_blank" class="tic-item p4">
+            <span class="tic-title">4. PADLET RACCOLTA</span>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://padlet.com/PatriziaGiannone/oltre_le_parole" class="qr-img">
+        </a>
+
+        <!-- 5. Arasaac -->
+        <a href="https://arasaac.org/" target="_blank" class="tic-item p5">
+            <span class="tic-title">5. PITTOGRAMMI</span>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://arasaac.org/" class="qr-img">
+        </a>
+
+        <!-- 6. Learning App -->
+        <a href="https://learningapps.org/view48746463" target="_blank" class="tic-item p6">
+            <span class="tic-title">6. GIOCHI INTERATTIVI</span>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://learningapps.org/view48746463" class="qr-img">
+        </a>
+
+        <!-- 7. GIOCO SPORT HTML -->
+        <a href="https://patriziagiannone.github.io/Giocosport/" target="_blank" class="tic-item p7">
+            <span class="tic-title">7. GIOCO SPORT (HTML)</span>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://patriziagiannone.github.io/Giocosport/" class="qr-img">
+        </a>
+
+        <!-- 8. Ebook Finale -->
+        <a href="https://read.bookcreator.com/Hkuu8jEq9lPM00jK0j16oYesbyg2/5sdiRYJKQx2D-DHa7fgGjw" target="_blank" class="tic-item p-final">
+            <span class="tic-title">FINALE: EBOOK</span>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://read.bookcreator.com/Hkuu8jEq9lPM00jK0j16oYesbyg2/5sdiRYJKQx2D-DHa7fgGjw" class="qr-img">
+        </a>
+
+    </div>
+    <div class="footer-note"><b>Istruzioni:</b> Clicca sulle schede bianche per aprire i link, oppure inquadra i QR Code con la fotocamera del tuo smartphone.</div>
+</div>
+
+</body>
+</html>
